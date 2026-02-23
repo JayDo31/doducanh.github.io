@@ -1,1 +1,148 @@
+:root{
+  --bg:#fff7fb;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --line:#f1d7e6;
+  --accent:#e85aa4;
+  --shadow: 0 10px 30px rgba(15, 23, 42, .08);
+  --radius:18px;
+}
 
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color:var(--text);
+  background: radial-gradient(1200px 600px at 20% 0%, #ffe4f2 0%, var(--bg) 40%, #ffffff 100%);
+}
+
+.container{max-width: 980px; margin: 0 auto; padding: 0 18px;}
+
+.topbar{
+  position: sticky; top:0; z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 247, 251, .75);
+  border-bottom: 1px solid rgba(241, 215, 230, .8);
+}
+.topbar-inner{display:flex; align-items:center; justify-content:space-between; padding: 14px 0;}
+.brand{font-weight:800; letter-spacing:.08em}
+.nav a{
+  color: var(--muted);
+  text-decoration:none;
+  margin-left: 16px;
+  font-weight:600;
+}
+.nav a:hover{color:var(--text)}
+
+.hero{
+  display:grid;
+  grid-template-columns: 1.4fr .8fr;
+  gap: 22px;
+  padding: 34px 0 10px;
+}
+.hero h1{font-size: 44px; line-height: 1.05; margin: 0 0 10px;}
+.accent{color: var(--accent);}
+.subtitle{margin:0 0 10px; color: var(--text); font-size: 16px;}
+.lead{margin: 0 0 14px; color: var(--muted); line-height: 1.7;}
+.note{margin-top: 10px; color: var(--muted);}
+
+.chips{display:flex; flex-wrap:wrap; gap:8px; margin: 14px 0;}
+.chip{
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.cta{display:flex; gap:10px; margin-top: 10px;}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  text-decoration:none;
+  color: var(--text);
+  font-weight:700;
+}
+.btn.primary{
+  border-color: rgba(232, 90, 164, .35);
+  background: rgba(232, 90, 164, .12);
+  color: #b31263;
+}
+
+.avatar-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+.avatar{
+  width:100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+}
+.avatar-caption{margin-top: 10px; color: var(--muted); font-size: 14px;}
+
+.section{padding: 22px 0;}
+.section h2{margin:0 0 8px; font-size: 28px;}
+.section-desc{margin:0 0 14px; color: var(--muted); line-height: 1.7;}
+
+.grid-2{display:grid; grid-template-columns: 1fr 1fr; gap: 16px;}
+.grid-3{display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;}
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+.card h3{margin: 0 0 10px;}
+.sep{border:0; border-top: 1px solid var(--line); margin: 16px 0;}
+
+.item-title{font-weight:800}
+.item-meta{color: var(--muted); margin-top: 4px}
+
+.bullets{margin: 10px 0 0 18px; color: var(--muted); line-height: 1.7;}
+.list{margin: 10px 0 0 18px; color: var(--muted); line-height: 1.7;}
+
+.xp-head{display:flex; align-items:flex-start; justify-content:space-between; gap: 10px;}
+.xp-role{font-weight:900}
+.xp-meta{color: var(--muted); margin-top: 4px;}
+.xp-tags{display:flex; flex-wrap:wrap; gap:6px; justify-content:flex-end;}
+.tag{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(232, 90, 164, .10);
+  border: 1px solid rgba(232, 90, 164, .22);
+  color: #b31263;
+}
+
+.contact{display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;}
+.contact-label{color: var(--muted); font-size: 13px; margin-bottom: 6px;}
+.contact a{color: #b31263; font-weight: 800; text-decoration:none;}
+.contact a:hover{text-decoration:underline;}
+.plain{color: var(--text); font-weight: 700;}
+
+.footer{
+  padding: 18px 0 40px;
+  color: var(--muted);
+  text-align:center;
+}
+
+@media (max-width: 860px){
+  .hero{grid-template-columns: 1fr;}
+  .grid-2,.grid-3{grid-template-columns: 1fr;}
+  .contact{grid-template-columns: 1fr;}
+  .hero h1{font-size: 38px;}
+}
