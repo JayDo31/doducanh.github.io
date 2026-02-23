@@ -1,10 +1,10 @@
 :root{
-  --bg:#fff7fb;
+   --bg:#f3f9ff;          /* nền xanh rất nhạt */
   --card:#ffffff;
-  --text:#1f2937;
-  --muted:#6b7280;
-  --line:#f1d7e6;
-  --accent:#e85aa4;
+  --text:#0f172a;        /* xanh navy đậm */
+  --muted:#475569;       /* slate */
+  --line:#cfe7ff;        /* viền xanh nhạt */
+  --accent:#1d9bf0;      /* xanh nước biển (accent) */
   --shadow: 0 10px 30px rgba(15, 23, 42, .08);
   --radius:18px;
 }
@@ -15,7 +15,7 @@ body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
   color:var(--text);
-  background: radial-gradient(1200px 600px at 20% 0%, #ffe4f2 0%, var(--bg) 40%, #ffffff 100%);
+  background: radial-gradient(1200px 600px at 20% 0%, #dff1ff 0%, var(--bg) 40%, #ffffff 100%);
 }
 
 .container{max-width: 980px; margin: 0 auto; padding: 0 18px;}
@@ -123,9 +123,9 @@ body{
   font-size: 12px;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(232, 90, 164, .10);
-  border: 1px solid rgba(232, 90, 164, .22);
-  color: #b31263;
+  background: rgba(29, 155, 240, .10);
+  border: 1px solid rgba(29, 155, 240, .22);
+  color: #0b66a8;
 }
 
 .contact{display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;}
